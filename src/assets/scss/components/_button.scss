@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 16px 48px;
+  transition: all .3s;
+  border: none;
+  box-shadow: none !important;
+
+  &-primary {
+    background-color: $brand-yellow !important;
+    color: #1B1C2A !important;
+
+    &:hover {
+      background-color: darken($brand-yellow, 10%) !important;
+    }
+  }
+  &-secondary {
+    background-color: $brand-dark-blue !important;
+    color: #fff !important;
+
+    &:hover {
+      background-color: darken($brand-dark-blue, 10%) !important;
+    }
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

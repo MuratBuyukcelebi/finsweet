@@ -1,0 +1,62 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1350px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 9,
+  9: $spacer * 12,
+);
+
+$grid-gutter-width: 2rem;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$brand-royal-blue:      #2405F2 !default;
+$brand-tint-blue:       #1C1E53 !default;
+$brand-dark-blue:       #282938 !default;
+
+$brand-yellow:          #FCD980 !default;
+$brand-accnet:          #EEF4FA !default;
+$brand-gray:            #F4F6FC !default;
+
+$brand-white:           #ffffff !default;
+
+$colors: (
+  "royal-blue":         $brand-royal-blue,
+  "tint-blue":          $brand-tint-blue,
+  "dark-blue":          $brand-dark-blue,
+  "yellow":             $brand-yellow,
+  "gray":               $brand-gray,
+  "accnet":             $brand-accnet,
+  "white":              $brand-white,
+);
