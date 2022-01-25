@@ -74,5 +74,9 @@ export default {
         transform: translateY(2px);
       }
     }
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
   }
 </style>
