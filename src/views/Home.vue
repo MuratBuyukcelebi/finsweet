@@ -1,5 +1,5 @@
 <template>
-  <div class="container"></div>
+  <hero/>
 </template>
 
 <style lang="scss">
@@ -9,3 +9,9 @@
   justify-content: space-evenly;
 }
 </style>
+<script>
+import Hero from "../components/Home/Hero";
+export default {
+  components: {Hero}
+}
+</script>
