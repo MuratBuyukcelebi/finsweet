@@ -1,5 +1,8 @@
 <template>
-  <hero/>
+  <div>
+    <hero/>
+    <work/>
+  </div>
 </template>
 
 <style lang="scss">
@@ -11,7 +14,9 @@
 </style>
 <script>
 import Hero from "../components/Home/Hero";
+import Work from "../components/Home/Work";
+
 export default {
-  components: {Hero}
+  components: {Work, Hero}
 }
 </script>
