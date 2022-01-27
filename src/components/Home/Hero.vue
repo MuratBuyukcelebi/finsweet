@@ -28,6 +28,7 @@ export default {
 @import "../../assets/scss/main";
 
   .hero {
+    overflow: hidden;
     padding-top: 126px;
     padding-bottom: 126px;
     background-color: $brand-tint-blue;

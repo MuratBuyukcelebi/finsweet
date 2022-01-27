@@ -74,7 +74,12 @@ export default {}
     }
 
     @include media-breakpoint-down(xl) {
-      display: none;
+      &__menu {
+        display: none;
+      }
+      &__button {
+        display: none;
+      }
     }
   }
 </style>
