@@ -16,14 +16,14 @@
           <div class="row mb-xl-5">
             <div class="col-xl-6">
               <div class="work-order__item">
-                <div class="work-order__item-logo"><span>01</span></div>
+                <div class="work-order__item-logo"><span class="work-order__item-logo__text">01</span></div>
                 <div class="work-order__item-title">Strategy</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
             </div>
             <div class="col-xl-6">
               <div class="work-order__item">
-                <div class="work-order__item-logo"><span>02</span></div>
+                <div class="work-order__item-logo"><span class="work-order__item-logo__text">02</span></div>
                 <div class="work-order__item-title">Wireframing</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
@@ -32,14 +32,14 @@
           <div class="row">
             <div class="col-xl-6">
               <div class="work-order__item">
-                <div class="work-order__item-logo"><span>03</span></div>
+                <div class="work-order__item-logo"><span class="work-order__item-logo__text">03</span></div>
                 <div class="work-order__item-title">Design</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
             </div>
             <div class="col-xl-6">
               <div class="work-order__item">
-                <div class="work-order__item-logo"><span>04</span></div>
+                <div class="work-order__item-logo"><span class="work-order__item-logo__text">04</span></div>
                 <div class="work-order__item-title">Development</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
@@ -110,20 +110,46 @@ export default {
       &__item {
         &-logo {
           display: flex;
+          position: relative;
           align-items: center;
           justify-content: center;
-          background-image: url("../../assets/home/work-order.svg");
-          background-size: 50px 50px;
           height: 50px;
           width: 50px;
           background-repeat: no-repeat;
+          background-color: $brand-royal-blue;
           margin-bottom: 16px;
+          border-radius: 8px;
+          overflow: hidden;
 
-          span {
+          &__text {
             font-weight: 500;
             font-size: 18px;
             line-height: 32px;
             color: #fff;
+            z-index: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: #5239FA;
+            height: 50px;
+            width: 50px;
+            bottom: 9px;
+            left: 8px;
+            border-radius: 8px;
+            z-index: 0;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background-color: #FCD980;
+            right: 26px;
+            top: 27px;
+            height: 50px;
+            width: 50px;
+            border-radius: 8px;
+            z-index: 0;
           }
         }
         &-title {
