@@ -2,6 +2,7 @@
   <div>
     <hero/>
     <work/>
+    <project/>
   </div>
 </template>
 
@@ -15,8 +16,9 @@
 <script>
 import Hero from "../components/Home/Hero";
 import Work from "../components/Home/Work";
+import Project from "../components/Home/Project";
 
 export default {
-  components: {Work, Hero}
+  components: {Project, Work, Hero}
 }
 </script>
