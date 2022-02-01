@@ -63,7 +63,7 @@ export default {}
       padding: 16px 48px;
       border: 2px solid rgba(244, 246, 252, 0.2);
       border-radius: 40px;
-      transition: all .2s;
+      transition: all .3s;
 
       &:hover {
         border-color: rgba(244, 246, 252, 0.4);
