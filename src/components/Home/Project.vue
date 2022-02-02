@@ -239,7 +239,7 @@ export default {
         padding: 0 56px;
         height: 100%;
         opacity: 0;
-        transition: all .5s;
+        transition: all .6s;
 
         &__title {
           font-weight: 600;
