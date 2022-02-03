@@ -25,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/main";
-
   .hero {
     overflow: hidden;
     padding-top: 126px;

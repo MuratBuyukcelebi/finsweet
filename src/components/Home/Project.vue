@@ -76,8 +76,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/main";
-
   .project {
     padding-top: 128px;
     padding-bottom: 128px;

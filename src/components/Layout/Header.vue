@@ -20,8 +20,6 @@ export default {}
 </script>
 
 <style lang="scss">
-  @import "src/assets/scss/main";
-
   .header {
     background-color: $brand-tint-blue;
     padding: 16px 0;

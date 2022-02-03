@@ -55,8 +55,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/assets/scss/main";
-
   .footer {
     padding-top: 96px;
     background-color: $brand-tint-blue;
