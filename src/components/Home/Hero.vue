@@ -7,7 +7,7 @@
           <div class="hero-content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
           <div class="hero-content__actions">
             <a href="#" class="btn btn-primary">View our work</a>
-            <a href="#" class="hero-content__button"><span>View Pricing</span><img src="../../assets/auth/arrow.svg" alt="svg"></a>
+            <a href="#" class="hero-content__button"><span>View Pricing</span><img src="../../assets/icons/arrow.svg" alt="svg"></a>
           </div>
         </div>
         <div class="col-xl-6 offset-xl-1">

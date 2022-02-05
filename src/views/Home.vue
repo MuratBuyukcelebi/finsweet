@@ -4,6 +4,7 @@
     <work/>
     <project/>
     <features/>
+    <comments/>
   </div>
 </template>
 
@@ -21,8 +22,9 @@ import Hero from "../components/Home/Hero";
 import Work from "../components/Home/Work";
 import Project from "../components/Home/Project";
 import Features from "../components/Home/Features";
+import Comments from "../components/Home/Comments";
 
 export default {
-  components: {Features, Project, Work, Hero}
+  components: {Comments, Features, Project, Work, Hero}
 }
 </script>
