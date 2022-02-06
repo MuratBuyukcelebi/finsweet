@@ -100,11 +100,12 @@ export default {
 }
 .faq-item {
   border-bottom: 2px solid #ECECF1;
+  padding-bottom: 32px;
 
   &__header {
     background-color: transparent;
     border: none;
-    padding: 32px 0;
+    padding-top: 32px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -158,9 +159,9 @@ export default {
   }
   &__inner {
     max-width: 624px;
-    padding-bottom: 48px;
     font-weight: 500;
     font-size: 18px;
+    padding-top: 32px;
     line-height: 32px;
     color: $brand-dark-blue;
     opacity: 0.7;
