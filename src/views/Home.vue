@@ -5,6 +5,7 @@
     <project/>
     <features/>
     <comments/>
+    <faq/>
   </div>
 </template>
 
@@ -23,8 +24,9 @@ import Work from "../components/Home/Work";
 import Project from "../components/Home/Project";
 import Features from "../components/Home/Features";
 import Comments from "../components/Home/Comments";
+import Faq from "../components/Home/Faq";
 
 export default {
-  components: {Comments, Features, Project, Work, Hero}
+  components: {Faq, Comments, Features, Project, Work, Hero}
 }
 </script>
