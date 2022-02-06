@@ -163,7 +163,7 @@ export default {
     font-size: 18px;
     line-height: 32px;
     color: $brand-dark-blue;
-    opacity: 0.87;
+    opacity: 0.7;
   }
 
   &:not(.collapsed) {
