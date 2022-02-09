@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row contact">
       <div class="col-xl-6">
         <div class="contact__content">
           <div class="contact__content-image">
@@ -22,6 +22,7 @@
             <input type="url" placeholder="Paste your Figma design URL">
             <button type="submit" class="btn btn-primary">Send an Inquiry</button>
           </form>
+          <a href="#" class="contact__form-button"><span>Get in touch with us</span><img src="../../assets/icons/arrow.svg" alt="svg"></a>
         </div>
       </div>
     </div>
@@ -36,6 +37,9 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
+  overflow: hidden;
+  max-height: 691px;
+
   &__content {
     position: relative;
     padding: 96px;
@@ -84,9 +88,7 @@ export default {
     }
   }
   &__form {
-    padding-top: 96px;
-    padding-left: 96px;
-    padding-right: 96px;
+    padding: 96px 96px 48px;
     background: #1C1E53;
     z-index: 0;
 
@@ -128,6 +130,29 @@ export default {
       }
       button {
         margin-top: 24px;
+      }
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: #fff;
+      }
+      img {
+        transition: all .3s;
+      }
+
+      &:hover {
+        img {
+          transform: translateX(6px);
+        }
       }
     }
   }
