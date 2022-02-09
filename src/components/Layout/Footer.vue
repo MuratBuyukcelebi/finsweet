@@ -123,7 +123,8 @@ export default {
       background-color: #fff;
 
       &-container {
-        padding: 32px 0;
+        padding-top: 32px;
+        padding-bottom: 32px;
         display: flex;
         align-items: center;
       }

@@ -27,8 +27,8 @@ export default {
 <style lang="scss" scoped>
   .hero {
     overflow: hidden;
-    padding-top: 126px;
-    padding-bottom: 126px;
+    padding-top: 128px;
+    padding-bottom: 128px;
     background-color: $brand-tint-blue;
 
     &-content {
