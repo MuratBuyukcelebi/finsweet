@@ -11,16 +11,32 @@
         <div class="col-xl-8">
           <div class="comments__slider">
             <div class="comments__list">
-              <div class="comments__item">
-                <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
-                <div class="comments__item-user">
-                  <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
-                  <div class="comments__item-user__information">
-                    <span class="comments__item-user__name">Jenny Wilson</span>
-                    <span class="comments__item-user__class">Vice President</span>
+              <flickity  class="flickity" ref="flickity" :options="flickityOptions">
+                <div class="carousel-cell">
+                  <div class="comments__item">
+                    <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
+                    <div class="comments__item-user">
+                      <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
+                      <div class="comments__item-user__information">
+                        <span class="comments__item-user__name">Jenny Wilson</span>
+                        <span class="comments__item-user__class">Vice President</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="carousel-cell">
+                  <div class="comments__item">
+                    <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
+                    <div class="comments__item-user">
+                      <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
+                      <div class="comments__item-user__information">
+                        <span class="comments__item-user__name">Jenny Wilson</span>
+                        <span class="comments__item-user__class">Vice President</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </flickity>
             </div>
             <div class="comments__slider-actions">
               <div class="comments__slider-button">
@@ -42,8 +58,23 @@
 </template>
 
 <script>
+import Flickity from 'vue-flickity'
+
 export default {
-  name: "Comments"
+  components: {
+    Flickity
+  },
+  data () {
+    return {
+      flickityOptions: {
+        initialIndex: 3,
+        prevNextButtons: true,
+        pageDots: true,
+        wrapAround: true,
+        freeScroll: true
+      }
+    }
+  }
 }
 </script>
 

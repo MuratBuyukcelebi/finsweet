@@ -26,7 +26,6 @@ export default {
         pageDots: true,
         wrapAround: true,
         freeScroll: true
-        // any options from Flickity can be used
       }
     }
   }

@@ -5,7 +5,7 @@
     <project/>
     <features/>
     <comments/>
-    <test/>
+    <test class="d-none"/>
     <faq/>
     <contact/>
     <blog/>
