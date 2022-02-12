@@ -1,0 +1,35 @@
+name: Deploy to Github Pages
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Create Node Environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install Packages and Build Application
+        run: |
+          npm install -g yarn
+          yarn global add @vue/cli
+          yarn install
+          yarn build
+          cd dist && cp index.html 404.html
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: dist
+          FOLDER: dist
+          CLEAN: true
+          CLEAN_EXCLUDE: '["CNAME"]'
