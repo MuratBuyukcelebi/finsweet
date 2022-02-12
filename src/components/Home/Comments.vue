@@ -10,35 +10,33 @@
         </div>
         <div class="col-xl-8">
           <div class="comments__slider">
-            <div class="comments__list">
-              <flickity  class="flickity" ref="flickity" :options="flickityOptions">
-                <div class="carousel-cell">
-                  <div class="comments__item">
-                    <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
-                    <div class="comments__item-user">
-                      <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
-                      <div class="comments__item-user__information">
-                        <span class="comments__item-user__name">Jenny Wilson</span>
-                        <span class="comments__item-user__class">Vice President</span>
-                      </div>
+            <flickity  class="flickity" ref="flickity" :options="flickityOptions">
+              <div class="carousel-cell">
+                <div class="comments__item">
+                  <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
+                  <div class="comments__item-user">
+                    <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
+                    <div class="comments__item-user__information">
+                      <span class="comments__item-user__name">Jenny Wilson</span>
+                      <span class="comments__item-user__class">Vice President</span>
                     </div>
                   </div>
                 </div>
-                <div class="carousel-cell">
-                  <div class="comments__item">
-                    <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
-                    <div class="comments__item-user">
-                      <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
-                      <div class="comments__item-user__information">
-                        <span class="comments__item-user__name">Jenny Wilson</span>
-                        <span class="comments__item-user__class">Vice President</span>
-                      </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="comments__item">
+                  <div class="comments__item-title">"The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus."</div>
+                  <div class="comments__item-user">
+                    <div class="comments__item-user__icon"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="image"></div>
+                    <div class="comments__item-user__information">
+                      <span class="comments__item-user__name">Jenny Wilson</span>
+                      <span class="comments__item-user__class">Vice President</span>
                     </div>
                   </div>
                 </div>
-              </flickity>
-            </div>
-            <div class="comments__slider-actions">
+              </div>
+            </flickity>
+            <div class="comments__slider-actions d-none">
               <div class="comments__slider-button">
                 <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.6" d="M11.5859 -1.23626e-07L13 3.21951L3.96947 10.9106L13 18.7805L11.5859 22L9.06922e-07 11.626L1.06329e-06 9.8374L11.5859 -1.23626e-07Z" fill="#282938"/>
@@ -69,16 +67,17 @@ export default {
       flickityOptions: {
         initialIndex: 3,
         prevNextButtons: true,
-        pageDots: true,
-        wrapAround: true,
-        freeScroll: true
+        pageDots: false,
+        wrapAround: false,
+        freeScroll: false,
+        draggable: false
       }
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .comments {
   padding-top: 128px;
   padding-bottom: 128px;
@@ -179,6 +178,45 @@ export default {
           background-color: darken(#5239FA, 5%);
         }
       }
+    }
+  }
+}
+.flickity {
+  &-button {
+    background: #5239FA;
+    transition: all .3s;
+
+    &:disabled {
+      background: #fff;
+      cursor: auto;
+      pointer-events: none;
+      opacity: 1;
+
+      .flickity-button-icon {
+        color: $brand-dark-blue !important;
+        opacity: 0.6;
+      }
+    }
+    &:hover {
+      background: darken(#5239FA, 5%);
+    }
+  }
+  &-prev-next-button {
+    top: unset;
+    bottom: 0;
+    width: 48px;
+    height: 48px;
+    transform: unset;
+
+    &.next { right: 0; left: unset }
+    &.previous { right: 60px; left: unset}
+    & .flickity-button-icon {
+      position: absolute;
+      left: 28%;
+      top: 28%;
+      width: 45%;
+      height: 45%;
+      color: #fff;
     }
   }
 }
