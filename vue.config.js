@@ -5,5 +5,6 @@ module.exports = {
         prependData: `@import "@/assets/scss/main.scss";`
       }
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === "production" ? "/webflow/" : "/",
 }
