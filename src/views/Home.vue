@@ -5,7 +5,6 @@
     <project/>
     <features/>
     <comments/>
-    <test class="d-none"/>
     <faq/>
     <contact/>
     <blog/>
@@ -33,6 +32,6 @@ import Blog from "../components/Home/Blog";
 import Test from "../components/Home/Test";
 
 export default {
-  components: {Test, Blog, Contact, Faq, Comments, Features, Project, Work, Hero}
+  components: {Blog, Contact, Faq, Comments, Features, Project, Work, Hero}
 }
 </script>
