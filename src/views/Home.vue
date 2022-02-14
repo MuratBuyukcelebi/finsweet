@@ -29,7 +29,6 @@ import Comments from "../components/Home/Comments";
 import Faq from "../components/Home/Faq";
 import Contact from "../components/Home/Contact";
 import Blog from "../components/Home/Blog";
-import Test from "../components/Home/Test";
 
 export default {
   components: {Blog, Contact, Faq, Comments, Features, Project, Work, Hero}
