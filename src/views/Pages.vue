@@ -8,6 +8,7 @@
             <div class="card-body">
               <div class="d-grid gap-2">
                 <a target="_blank" href="/" class="btn btn-dark btn-block btn-lg">Anasayfa</a>
+                <a target="_blank" href="/about" class="btn btn-dark btn-block btn-lg">About Us</a>
               </div>
             </div>
           </div>
