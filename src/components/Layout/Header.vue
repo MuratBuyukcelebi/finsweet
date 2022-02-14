@@ -4,7 +4,7 @@
       <a href="#" class="header__logo"><img src="../../../src/assets/layout/logo.svg" alt="logo"></a>
       <nav class="header__menu">
         <a href="#">Home</a>
-        <a href="#">About us</a>
+        <a href="/about">About us</a>
         <a href="#">Features</a>
         <a href="#">Pricing</a>
         <a href="#">FAQ</a>
