@@ -66,11 +66,11 @@
         <span class="benefits__logo-users">Finsweet Users</span>
       </div>
       <div class="benefits__logo-list">
-        <span><img src="../../assets/about/benefits/1.svg" alt="image"></span>
-        <span><img src="../../assets/about/benefits/2.svg" alt="image"></span>
-        <span><img src="../../assets/about/benefits/3.svg" alt="image"></span>
-        <span><img src="../../assets/about/benefits/4.svg" alt="image"></span>
-        <span><img src="../../assets/about/benefits/5.svg" alt="image"></span>
+        <a href="#"><img src="../../assets/about/benefits/1.svg" alt="image"></a>
+        <a href="#"><img src="../../assets/about/benefits/2.svg" alt="image"></a>
+        <a href="#"><img src="../../assets/about/benefits/3.svg" alt="image"></a>
+        <a href="#"><img src="../../assets/about/benefits/4.svg" alt="image"></a>
+        <a href="#"><img src="../../assets/about/benefits/5.svg" alt="image"></a>
       </div>
     </div>
   </div>
