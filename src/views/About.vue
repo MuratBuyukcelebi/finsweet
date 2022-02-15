@@ -5,6 +5,7 @@
     <Process/>
     <Vision/>
     <Benefits/>
+    <Team/>
   </div>
 </template>
 
@@ -14,10 +15,11 @@ import We from "../components/About/We";
 import Process from "../components/About/Process";
 import Vision from "../components/About/Vision";
 import Benefits from "../components/About/Benefits";
+import Team from "../components/About/Team";
 
 export default {
   name: "About",
-  components: {Benefits, Vision, Process, Hero, We}
+  components: {Team, Benefits, Vision, Process, Hero, We}
 }
 </script>
 
