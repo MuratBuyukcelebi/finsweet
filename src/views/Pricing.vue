@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="col-xl-4">
-          <div class="pricing-item">
+          <div class="pricing-item pricing-item--center">
             <div class="pricing-item__top">
               <span class="pricing-item__top-price">$299</span>
               <span class="pricing-item__top-limit">Per Design</span>
@@ -113,7 +113,7 @@
                 <div class="pricing-item__feature-item__text">Unlimited users</div>
               </div>
             </div>
-            <a href="#" class="btn btn-secondary pricing-item__button">Get Start</a>
+            <a href="#" class="btn btn-primary pricing-item__button">Get Start</a>
           </div>
         </div>
         <div class="col-xl-4">
@@ -286,6 +286,83 @@ export default {
   }
   &__button {
     width: 100%;
+  }
+
+  &--center {
+    background: #1C1E53 !important;
+  }
+  &--center & {
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+
+      &-price {
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 56px;
+        color: #fff;
+      }
+      &-limit {
+        font-size: 16px;
+        line-height: 28px;
+        color: #fff;
+      }
+    }
+    &__location {
+      margin-bottom: 50px;
+
+      &-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      &-description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        opacity: .7;
+        color: #fff;
+      }
+    }
+    &__feature {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 80px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &__text {
+          font-size: 16px;
+          line-height: 28px;
+          color: #fff;
+          opacity: 0.7;
+        }
+
+        &--active & {
+          &__icon {
+            svg {
+              path {
+                fill: #97DAAD;
+              }
+            }
+          }
+          &__text {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &__button {
+      width: 100%;
+    }
   }
 }
 </style>
