@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="pricing">
+  <div class="pricing">
+    <div class="container pricing__list">
       <div class="pricing__top">
         <div class="pricing__top-title">Our Pricing Plans</div>
         <div class="pricing__top-description">When you’re ready to go beyond prototyping in Figma, Webflow is ready to help you bring your designs to life — without coding them.</div>
@@ -64,12 +64,12 @@
         <div class="col-xl-4">
           <div class="pricing-item pricing-item--center">
             <div class="pricing-item__top">
-              <span class="pricing-item__top-price">$299</span>
-              <span class="pricing-item__top-limit">Per Design</span>
+              <span class="pricing-item__top-price">$399</span>
+              <span class="pricing-item__top-limit">Multi Design</span>
             </div>
             <div class="pricing-item__location">
-              <div class="pricing-item__location-title">Landing Page </div>
-              <div class="pricing-item__location-description">When you’re ready to go beyond prototyping in Figma, </div>
+              <div class="pricing-item__location-title">Website Page</div>
+              <div class="pricing-item__location-description">WWhen you’re ready to go beyond prototyping in Figma, Webflow’s ready to help.</div>
             </div>
             <div class="pricing-item__feature">
               <div class="pricing-item__feature-item pricing-item__feature-item--active">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="pricing-item__feature-item__text">Chat support</div>
               </div>
-              <div class="pricing-item__feature-item">
+              <div class="pricing-item__feature-item pricing-item__feature-item--active">
                 <div class="pricing-item__feature-item__icon">
                   <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="pricing-item__feature-item__text">Optimize hashtags</div>
               </div>
-              <div class="pricing-item__feature-item">
+              <div class="pricing-item__feature-item pricing-item__feature-item--active">
                 <div class="pricing-item__feature-item__icon">
                   <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
@@ -119,7 +119,7 @@
         <div class="col-xl-4">
           <div class="pricing-item">
             <div class="pricing-item__top">
-              <span class="pricing-item__top-price">$299</span>
+              <span class="pricing-item__top-price">$399</span>
               <span class="pricing-item__top-limit">Per Design</span>
             </div>
             <div class="pricing-item__location">
@@ -151,7 +151,7 @@
                 </div>
                 <div class="pricing-item__feature-item__text">Chat support</div>
               </div>
-              <div class="pricing-item__feature-item">
+              <div class="pricing-item__feature-item pricing-item__feature-item--active">
                 <div class="pricing-item__feature-item__icon">
                   <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
@@ -159,7 +159,7 @@
                 </div>
                 <div class="pricing-item__feature-item__text">Optimize hashtags</div>
               </div>
-              <div class="pricing-item__feature-item">
+              <div class="pricing-item__feature-item pricing-item__feature-item--active">
                 <div class="pricing-item__feature-item__icon">
                   <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
@@ -173,20 +173,23 @@
         </div>
       </div>
     </div>
+    <Faq/>
   </div>
 </template>
 
 <script>
+import Faq from "../components/Home/Faq";
 export default {
-  name: "Pricing"
+  name: "Pricing",
+  components: {Faq}
 }
 </script>
 
 <style lang="scss" scoped>
 .pricing {
-  padding-top: 128px;
-  padding-bottom: 128px;
-
+  &__list {
+    padding-top: 128px;
+  }
   &__top {
     margin-bottom: 64px;
     display: flex;
@@ -293,70 +296,25 @@ export default {
   }
   &--center & {
     &__top {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 20px;
-
       &-price {
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 56px;
         color: #fff;
       }
       &-limit {
-        font-size: 16px;
-        line-height: 28px;
-        color: #fff;
+        color: $brand-yellow;
       }
     }
     &__location {
-      margin-bottom: 50px;
-
       &-title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 36px;
         color: #fff;
-        margin-bottom: 8px;
       }
       &-description {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 28px;
-        opacity: .7;
         color: #fff;
       }
     }
     &__feature {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-bottom: 80px;
-
       &-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-
         &__text {
-          font-size: 16px;
-          line-height: 28px;
           color: #fff;
-          opacity: 0.7;
-        }
-
-        &--active & {
-          &__icon {
-            svg {
-              path {
-                fill: #97DAAD;
-              }
-            }
-          }
-          &__text {
-            opacity: 1;
-          }
         }
       }
     }
