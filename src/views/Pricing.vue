@@ -247,6 +247,7 @@ export default {
   }
   &__location {
     margin-bottom: 50px;
+    min-height: 130px;
 
     &-title {
       font-weight: 500;
@@ -267,7 +268,10 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 80px;
+    height: 100%;
+    min-height: 268px;
+    margin-bottom: 64px;
+    justify-content: center;
 
     &-item {
       display: flex;
@@ -300,10 +304,31 @@ export default {
   }
 
   &--center {
+    position: relative;
     background: #1C1E53 !important;
+    z-index: 0;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1150px;
+      width: 1150px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 100%;
+      bottom: 155px;
+      left: -84%;
+      z-index: 0;
+      pointer-events: none;
+    }
   }
   &--center & {
+    z-index: 1;
+
     &__top {
+      position: relative;
+      z-index: 1;
+
       &-price {
         color: #fff;
       }
@@ -312,6 +337,9 @@ export default {
       }
     }
     &__location {
+      position: relative;
+      z-index: 1;
+
       &-title {
         color: #fff;
       }
@@ -320,6 +348,9 @@ export default {
       }
     }
     &__feature {
+      position: relative;
+      z-index: 1;
+
       &-item {
         &__text {
           color: #fff;

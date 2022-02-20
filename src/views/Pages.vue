@@ -9,6 +9,7 @@
               <div class="d-grid gap-2">
                 <a target="_blank" href="/" class="btn btn-dark btn-block btn-lg">Anasayfa</a>
                 <a target="_blank" href="/about" class="btn btn-dark btn-block btn-lg">About Us</a>
+                <a target="_blank" href="/pricing" class="btn btn-dark btn-block btn-lg">Pricing</a>
               </div>
             </div>
           </div>
