@@ -5,7 +5,7 @@
       <nav class="header__menu">
         <a href="/">Home</a>
         <a href="/about">About us</a>
-        <a href="#">Features</a>
+        <a href="/features">Features</a>
         <a href="#">Pricing</a>
         <a href="#">FAQ</a>
         <a href="#">Blog</a>
