@@ -1,9 +1,11 @@
 <template>
   <div class="container benefits">
-    <div class="benefits__title">
-      <span>The benefits of working with us</span>
-    </div>
     <div class="row">
+      <div class="col-xl-12">
+        <div class="benefits__title">
+          <span>The benefits of working with us</span>
+        </div>
+      </div>
       <div class="col-xl-4">
         <div class="benefits-item">
           <div class="benefits-item__icon">
@@ -66,11 +68,11 @@
         <span class="benefits__logo-users">Finsweet Users</span>
       </div>
       <div class="benefits__logo-list">
-        <a href="#"><img src="../../assets/about/benefits/1.svg" alt="image"></a>
-        <a href="#"><img src="../../assets/about/benefits/2.svg" alt="image"></a>
-        <a href="#"><img src="../../assets/about/benefits/3.svg" alt="image"></a>
-        <a href="#"><img src="../../assets/about/benefits/4.svg" alt="image"></a>
-        <a href="#"><img src="../../assets/about/benefits/5.svg" alt="image"></a>
+        <a href="#"><img src="../assets/benefits/1.svg" alt="image"></a>
+        <a href="#"><img src="../assets/benefits/2.svg" alt="image"></a>
+        <a href="#"><img src="../assets/benefits/3.svg" alt="image"></a>
+        <a href="#"><img src="../assets/benefits/4.svg" alt="image"></a>
+        <a href="#"><img src="../assets/benefits/5.svg" alt="image"></a>
       </div>
     </div>
   </div>
