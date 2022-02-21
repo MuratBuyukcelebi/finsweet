@@ -45,7 +45,6 @@ html {
   color: #2c3e50;
   position: relative;
   height: var(--app-height, 100vh);
-  width: var(--app-width, 100%);
 
   a {
     text-decoration: none;
