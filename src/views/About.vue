@@ -14,7 +14,7 @@ import Hero from "../components/About/Hero";
 import We from "../components/About/We";
 import Process from "../components/About/Process";
 import Vision from "../components/About/Vision";
-import Benefits from "../components/About/Benefits";
+import Benefits from "../components/Benefits";
 import Team from "../components/About/Team";
 
 export default {
@@ -23,6 +23,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>

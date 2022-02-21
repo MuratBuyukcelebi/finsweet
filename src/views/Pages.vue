@@ -10,6 +10,7 @@
                 <a target="_blank" href="/" class="btn btn-dark btn-block btn-lg">Anasayfa</a>
                 <a target="_blank" href="/about" class="btn btn-dark btn-block btn-lg">About Us</a>
                 <a target="_blank" href="/pricing" class="btn btn-dark btn-block btn-lg">Pricing</a>
+                <a target="_blank" href="/features" class="btn btn-dark btn-block btn-lg">Features</a>
               </div>
             </div>
           </div>

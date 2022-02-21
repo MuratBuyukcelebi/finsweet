@@ -186,7 +186,7 @@
 </template>
 
 <script>
-import Faq from "../components/Home/Faq";
+import Faq from "../components/Faq";
 export default {
   name: "Pricing",
   components: {Faq}

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from "../views/Home"
 import About from "../views/About"
 import Pricing from "../views/Pricing"
+import Features from "../views/Features"
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,10 @@ const routes = [
       {
         path: '/pricing',
         component: Pricing,
+      },
+      {
+        path: '/features',
+        component: Features,
       }
     ]
   },

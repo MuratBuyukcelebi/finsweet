@@ -5,7 +5,7 @@
     <project/>
     <features/>
     <comments/>
-    <faq/>
+    <Faq/>
     <contact/>
     <blog/>
   </div>
@@ -21,11 +21,11 @@ import Work from "../components/Home/Work";
 import Project from "../components/Home/Project";
 import Features from "../components/Home/Features";
 import Comments from "../components/Home/Comments";
-import Faq from "../components/Home/Faq";
 import Contact from "../components/Home/Contact";
 import Blog from "../components/Home/Blog";
+import Faq from "../components/Faq";
 
 export default {
-  components: {Blog, Contact, Faq, Comments, Features, Project, Work, Hero}
+  components: {Faq, Blog, Contact, Comments, Features, Project, Work, Hero}
 }
 </script>
