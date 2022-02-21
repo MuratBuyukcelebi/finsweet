@@ -1,6 +1,6 @@
 <template>
   <div class="container benefits">
-    <div class="row">
+    <div class="row benefits__list">
       <div class="col-xl-12">
         <div class="benefits__title">
           <span>The benefits of working with us</span>
@@ -86,7 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 .benefits {
-  padding-top: 128px;
+  padding-top: 128px - 96px;
   padding-bottom: 128px;
 
   &__title {
@@ -102,6 +102,9 @@ export default {
       color: $brand-dark-blue;
       max-width: 630px;
     }
+  }
+  &__list {
+    margin-top: 96px;
   }
   &__logo {
     display: flex;
