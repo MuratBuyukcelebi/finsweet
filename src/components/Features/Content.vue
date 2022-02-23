@@ -5,7 +5,7 @@
         <div class="row align-items-center">
           <div class="col-xl-6">
             <div class="content-item__top">Use Client-first</div>
-            <div class="content-item__title">Top agencies and freelancers around the world use Client-first</div>
+            <div class="content-item__title">Top agencies and freelancers around the world use <br class="d-xl-block d-none"> Client-first</div>
             <div class="content-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
           </div>
           <div class="col-xl-6">
@@ -100,6 +100,7 @@ export default {
     line-height: 56px;
     color: $brand-dark-blue;
     margin-bottom: 16px;
+    max-width: 630px;
   }
   &__description {
     font-size: 16px;
