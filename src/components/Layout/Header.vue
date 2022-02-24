@@ -10,7 +10,7 @@
         <a href="#">FAQ</a>
         <a href="#">Blog</a>
       </nav>
-      <a href="#" class="header__button">Contact us</a>
+      <a href="/contact" class="header__button">Contact us</a>
     </div>
   </div>
 </template>
