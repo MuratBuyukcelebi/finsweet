@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="content-item"  style="--background: #FFFCF3;">
+    <div class="content-item" style="--background: #FFFCF3;">
       <div class="container">
         <div class="row align-items-center flex-row-reverse">
           <div class="col-xl-6">
