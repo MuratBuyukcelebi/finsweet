@@ -5,6 +5,7 @@ import About from "../views/About"
 import Pricing from "../views/Pricing"
 import Features from "../views/Features"
 import Contact from "../views/Contact"
+import Privacy from "../views/Privacy"
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,10 @@ const routes = [
       {
         path: '/contact',
         component: Contact,
+      },
+      {
+        path: '/privacy',
+        component: Privacy,
       }
     ]
   },
