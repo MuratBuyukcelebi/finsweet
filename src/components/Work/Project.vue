@@ -112,7 +112,6 @@ export default {
 <style lang="scss" scoped>
 .project {
   padding-top: 96px;
-  padding-bottom: 96px;
 
   &__menu {
     display: flex;
