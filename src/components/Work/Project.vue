@@ -11,7 +11,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate), #F4EDE1 16.74%, #98B1C6 103.17%);">
-              <img src="../../assets/work/project/1.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/1.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 1</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -26,7 +28,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate), #FFD3AF 16.74%, #4F56FF 103.17%);">
-              <img src="../../assets/work/project/2.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/2.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 2</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -41,7 +45,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate), #EEBCA7 16.74%, #C8C8C8 103.17%);">
-              <img src="../../assets/work/project/3.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/3.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 3</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -56,7 +62,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate), #C2E7F2 16.74%, #98A4FF 103.17%);">
-              <img src="../../assets/work/project/4.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/4.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 4</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -71,7 +79,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate),  #C5BCFF 16.74%, #9BF7D5 103.17%);">
-              <img src="../../assets/work/project/5.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/5.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 5</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -86,7 +96,9 @@
         <div class="col-xl-6">
           <div class="project-item">
             <div class="project-item__image" style="--background: linear-gradient(var(--bgRotate), #D2D6FD 16.74%, #D6ACEA 103.17%);">
-              <img src="../../assets/work/project/6.png" alt="image">
+              <div class="project-item__image-container">
+                <img src="../../assets/work/project/6.png" alt="image">
+              </div>
             </div>
             <div class="project-item__title">Template 6</div>
             <div class="project-item__description">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</div>
@@ -156,11 +168,27 @@ export default {
     justify-content: center;
     margin-bottom: 24px;
     animation: rotate 8s linear infinite;
+    overflow: hidden;
+
+    &-container {
+      height: 317px;
+      overflow: hidden;
+    }
 
     img {
       height: 317px;
       width: auto;
-      object-fit: cover;
+      transition: all .6s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      & .project-item__button svg {
+        transform: translateX(6px);
+      }
     }
   }
   &__title {
