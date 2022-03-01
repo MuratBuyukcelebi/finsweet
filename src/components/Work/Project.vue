@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="project">
-      <ul class="project__menu">
-        <li class="active">All</li>
-        <li>UI Design</li>
-        <li>Webflow Design</li>
-        <li>Figma Design</li>
-      </ul>
+      <div class="project__menu">
+        <label class="project__menu-title"><input type="checkbox">All</label>
+        <label class="project__menu-title"><input type="checkbox">UI Design</label>
+        <label class="project__menu-title"><input type="checkbox">Webflow Design</label>
+        <label class="project__menu-title"><input type="checkbox">Figma Design</label>
+      </div>
       <div class="row project__list">
         <div class="col-xl-6">
           <div class="project-item">
@@ -133,7 +133,8 @@ export default {
     margin-bottom: 48px;
     list-style-type: none;
 
-    li {
+    &-title {
+      position: relative;
       font-weight: 500;
       font-size: 18px;
       line-height: 32px;
@@ -145,6 +146,11 @@ export default {
         color: $brand-royal-blue;
         opacity: 1;
       }
+    }
+    input {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
     }
   }
   &__list {
@@ -238,7 +244,6 @@ export default {
     --bgRotate: 490deg;
   }
 }
-
 @property --bgRotate {
   syntax: '<angle>';
   initial-value: 490deg;
