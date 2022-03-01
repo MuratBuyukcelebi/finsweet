@@ -2,10 +2,22 @@
   <div class="container">
     <div class="project">
       <div class="project__menu">
-        <label class="project__menu-title"><input type="checkbox">All</label>
-        <label class="project__menu-title"><input type="checkbox">UI Design</label>
-        <label class="project__menu-title"><input type="checkbox">Webflow Design</label>
-        <label class="project__menu-title"><input type="checkbox">Figma Design</label>
+        <div class="project__menu-item project__menu-item--active">
+          <label for="all">All</label>
+          <input checked="checked" id="all" type="radio" name="menu">
+        </div>
+        <div class="project__menu-item">
+          <label for="ui">UI Design</label>
+          <input id="ui" type="radio" name="menu">
+        </div>
+        <div class="project__menu-item">
+          <label for="web">Webflow Design</label>
+          <input id="web" type="radio" name="menu">
+        </div>
+        <div class="project__menu-item">
+          <label for="figma">Figma Design</label>
+          <input id="figma" type="radio" name="menu">
+        </div>
       </div>
       <div class="row project__list">
         <div class="col-xl-6">
@@ -133,25 +145,36 @@ export default {
     margin-bottom: 48px;
     list-style-type: none;
 
-    &-title {
-      position: relative;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 32px;
-      color: $brand-dark-blue;
-      opacity: 0.7;
-      cursor: pointer;
+    &-item {
+      label {
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: $brand-dark-blue;
+        opacity: 0.7;
+        cursor: pointer;
+      }
 
-      &.active {
-        color: $brand-royal-blue;
-        opacity: 1;
+      input {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+
+        &[type="radio"]:checked+label {
+          color: $brand-royal-blue;
+          opacity: 1;
+        }
+      }
+
+      &--active {
+        label {
+          color: $brand-royal-blue;
+          opacity: 1;
+        }
       }
     }
-    input {
-      opacity: 0;
-      pointer-events: none;
-      position: absolute;
-    }
+
   }
   &__list {
     .col-xl-6:nth-last-child(n+3) {
