@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container">
       <div class="row">
-        <div class="col-xl-5">
+        <div class="col-lg-5">
           <div class="hero-content__title">Building stellar websites for early startups</div>
           <div class="hero-content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
           <div class="hero-content__actions">
@@ -10,7 +10,7 @@
             <a href="#" class="hero-content__button"><span>View Pricing</span><img src="../../assets/icons/arrow.svg" alt="svg"></a>
           </div>
         </div>
-        <div class="col-xl-6 offset-xl-1">
+        <div class="col-lg-6 offset-xl-1">
           <img class="hero__image" src="../../assets/home/hero.svg" alt="hero-image">
         </div>
       </div>
@@ -76,6 +76,56 @@ export default {
     }
     &__image {
       pointer-events: none;
+    }
+
+    @include media-breakpoint-down(xxl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      &-content {
+        &__title {
+          font-size: 42px;
+          line-height: 60px;
+        }
+        &__description {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &__actions {
+          gap: 24px;
+        }
+        &__button {
+          gap: 8px;
+
+          span {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      &__image {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+
+      &-content {
+        &__title {
+          font-size: 32px;
+          line-height: 48px;
+        }
+        &__description {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        &__actions {
+          gap: 16px;
+        }
+      }
     }
   }
 </style>
