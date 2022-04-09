@@ -2,7 +2,7 @@
   <div class="work">
     <div class="container">
       <div class="row">
-        <div class="col-xl-4">
+        <div class="col-lg-4 mb-xl-0 mb-5">
           <div class="work-content__title">How we work</div>
           <div class="work-content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
           <a href="#" class="work-content__button">
@@ -12,16 +12,16 @@
             </svg>
           </a>
         </div>
-        <div class="col-xl-6 offset-xl-2">
-          <div class="row mb-xl-5">
-            <div class="col-xl-6">
+        <div class="col-lg-6 offset-xl-2 offset-lg-1">
+          <div class="row mb-sm-5 mb-4">
+            <div class="col-sm-6 mb-sm-0 mb-4">
               <div class="work-order__item">
                 <div class="work-order__item-logo"><span class="work-order__item-logo__text">01</span></div>
                 <div class="work-order__item-title">Strategy</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-sm-6">
               <div class="work-order__item">
                 <div class="work-order__item-logo"><span class="work-order__item-logo__text">02</span></div>
                 <div class="work-order__item-title">Wireframing</div>
@@ -30,14 +30,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-6">
+            <div class="col-sm-6 mb-sm-0 mb-4">
               <div class="work-order__item">
                 <div class="work-order__item-logo"><span class="work-order__item-logo__text">03</span></div>
                 <div class="work-order__item-title">Design</div>
                 <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-sm-6">
               <div class="work-order__item">
                 <div class="work-order__item-logo"><span class="work-order__item-logo__text">04</span></div>
                 <div class="work-order__item-title">Development</div>
@@ -162,6 +162,88 @@ export default {
           line-height: 28px;
           color: $brand-dark-blue;
           opacity: 0.7;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      &-content {
+        &__title {
+          font-size: 36px;
+          line-height: 48px;
+        }
+        &__description {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &__button {
+          span {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+      &-order {
+        &__item {
+          &-logo {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 8px;
+
+            &::after {
+              height: 40px;
+              width: 40px;
+              bottom: 5px;
+              left: 5px;
+            }
+            &::before {
+              right: 20px;
+              top: 20px;
+              height: 40px;
+              width: 40px;
+            }
+          }
+          &-title {
+            font-size: 24px;
+            line-height: 32px;
+          }
+          &-description {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+    @include media-breakpoint-down(sm) {
+      &-content {
+        &__title {
+          font-size: 32px;
+          line-height: 1.5;
+          margin-bottom: 8px;
+        }
+        &__description {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &__button {
+          span {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+      &-order {
+        &__item {
+          &-description {
+            max-width: 300px;
+          }
         }
       }
     }
