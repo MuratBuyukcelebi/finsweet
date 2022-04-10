@@ -6,7 +6,7 @@
         <div class="features__header-title">Design that solves problems, one product at a time</div>
       </div>
       <div class="features__list">
-        <div class="row">
+        <div class="row gy-xl-0 gy-md-4 gy-3">
           <div class="col-xl-4">
             <div class="features__item">
               <div class="features__item-logo">
@@ -56,7 +56,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row gy-xl-0 gy-md-4 gy-3">
           <div class="col-xl-4">
             <div class="features__item">
               <div class="features__item-logo">
@@ -171,6 +171,75 @@ export default {
         line-height: 28px;
         opacity: 0.7;
         color: $brand-dark-blue;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      &__header {
+        &-title {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+      &__list {
+        flex-direction: row;
+        gap: 24px;
+      }
+      &__item {
+        padding: 48px;
+
+        &-logo {
+          margin-bottom: 16px;
+        }
+
+        &-title {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      &__list {
+        flex-direction: column;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+
+      &__header {
+        &-title {
+          font-size: 32px;
+          line-height: 1.5;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      &__header {
+        margin-bottom: 24px;
+
+        &-title {
+          font-size: 22px;
+          max-width: 360px;
+        }
+      }
+      &__item {
+        padding: 36px;
+
+        &-logo {
+          margin-bottom: 14px;
+        }
+        &-title {
+          font-size: 18px;
+          margin-bottom: 10px;
+          line-height: 1.5;
+        }
+        &-description {
+          font-size: 14px;
+          line-height: 1.5;
+        }
       }
     }
   }
