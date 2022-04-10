@@ -277,6 +277,25 @@ export default {
       }
     }
 
+    @include media-breakpoint-down(xxl) {
+      &__portfolio {
+        display: flex;
+        flex-direction: column;
+        gap: $grid-gutter-width;
+
+        &-image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        &-content {
+          &__title {
+            margin-top: 40%;
+          }
+        }
+      }
+    }
     @include media-breakpoint-down(xl) {
       padding-top: 96px;
       padding-bottom: 96px;
