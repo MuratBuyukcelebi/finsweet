@@ -224,7 +224,7 @@ export default {
     @include media-breakpoint-down(sm) {
       &-content {
         &__title {
-          font-size: 32px;
+          font-size: 26px;
           line-height: 1.5;
           margin-bottom: 8px;
         }
