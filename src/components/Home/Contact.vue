@@ -1,28 +1,30 @@
 <template>
-  <div class="container">
-    <div class="row contact">
-      <div class="col-xl-6">
-        <div class="contact__content">
-          <div class="contact__content-image">
-            <div class="contact__content-image__filter">
-              <img src="../../assets/home/contact.png" alt="image">
+  <div class="contact">
+    <div class="container">
+      <div class="row gx-0 contact__container">
+        <div class="col-lg-6 d-lg-block d-none">
+          <div class="contact__content">
+            <div class="contact__content-image">
+              <div class="contact__content-image__filter">
+                <img src="../../assets/home/contact.png" alt="image">
+              </div>
             </div>
+            <div class="contact__content-title">Building stellar websites for early startups</div>
+            <div class="contact__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</div>
           </div>
-          <div class="contact__content-title">Building stellar websites for early startups</div>
-          <div class="contact__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</div>
         </div>
-      </div>
-      <div class="col-xl-6">
-        <div class="contact__form">
-          <div class="contact__form-title">Send inquiry</div>
-          <div class="contact__form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
-          <form class="contact__form-entry">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Email">
-            <input type="url" placeholder="Paste your Figma design URL">
-            <button type="submit" class="btn btn-primary">Send an Inquiry</button>
-          </form>
-          <a href="#" class="contact__form-button"><span>Get in touch with us</span><img src="../../assets/icons/arrow.svg" alt="svg"></a>
+        <div class="col-lg-6">
+          <div class="contact__form">
+            <div class="contact__form-title">Send inquiry</div>
+            <div class="contact__form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
+            <form class="contact__form-entry">
+              <input type="text" placeholder="Your Name">
+              <input type="email" placeholder="Email">
+              <input type="url" placeholder="Paste your Figma design URL">
+              <button type="submit" class="btn btn-primary">Send an Inquiry</button>
+            </form>
+            <a href="#" class="contact__form-button"><span>Get in touch with us</span><img src="../../assets/icons/arrow.svg" alt="svg"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -37,9 +39,11 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
-  overflow: hidden;
-  max-height: 691px;
 
+  &__container {
+    overflow: hidden;
+    max-height: 691px;
+  }
   &__content {
     position: relative;
     padding: 96px;
@@ -153,6 +157,72 @@ export default {
         img {
           transform: translateX(6px);
         }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__content {
+      padding: 80px 52px 52px;
+
+      &-title {
+        font-size: 48px;
+        line-height: 1.5;
+      }
+      &-image {
+        img {
+          height: 620px;
+          width: 100%;
+        }
+      }
+    }
+    &__form {
+      padding: 48px 48px 24px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      padding: 64px 32px 32px;
+
+      &-title {
+        font-size: 32px;
+      }
+      &-image {
+        img {
+          height: 620px;
+          width: 100%;
+        }
+      }
+    }
+    &__form {
+      padding: 24px 32px;
+
+      &-button {
+        margin-top: 20px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    background: #1C1E53;
+
+    &__form {
+      padding: 36px 0;
+
+      &-title {
+       text-align: center;
+      }
+      &-description {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+  @include media-breakpoint-down(sm) {
+    &__form {
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
       }
     }
   }
