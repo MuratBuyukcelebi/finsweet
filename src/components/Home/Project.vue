@@ -2,7 +2,7 @@
   <div class="project">
     <div class="container">
       <div class="project__title">
-        <span>View our projects</span>
+        <span class="project__title-text">View our projects</span>
         <a href="#" class="project__title-action">
           <span>View More</span>
           <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,13 +86,13 @@ export default {
       align-items: center;
       margin-bottom: 64px;
 
-      span {
+      &-text {
         font-weight: 600;
         font-size: 48px;
         line-height: 64px;
         color: $brand-dark-blue;
       }
-      a {
+      &-action {
         span {
           margin-right: 16px;
           font-weight: 500;
@@ -142,7 +142,7 @@ export default {
         &__title {
           font-weight: 600;
           font-size: 24px;
-          line-height: 36px;
+          line-height: 1.5;
           color: #FFFFFF;
           margin-bottom: 16px;
           margin-top: 312px;
@@ -150,7 +150,7 @@ export default {
         &__description {
           font-weight: 500;
           font-size: 16px;
-          line-height: 28px;
+          line-height: 1.5;
           color: #FFFFFF;
           opacity: 0.8;
           margin-bottom: 40px;
@@ -224,6 +224,7 @@ export default {
 
       &-image {
         position: relative;
+        max-width: 405px;
 
         &:hover .project__portfolio-content {
           opacity: 1;
@@ -238,11 +239,12 @@ export default {
         height: 100%;
         opacity: 0;
         transition: all .6s;
+        width: 100%;
 
         &__title {
           font-weight: 600;
           font-size: 24px;
-          line-height: 36px;
+          line-height: 1.5;
           color: #FFFFFF;
           margin-bottom: 10px;
           margin-top: 128px;
@@ -273,10 +275,206 @@ export default {
           }
         }
       }
+    }
 
-      img {
-        width: 100%;
-        height: 284px;
+    @include media-breakpoint-down(xl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      &__title {
+        &-text {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+
+      &__portfolio {
+        flex-direction: row;
+        margin-top: 36px;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      &__title {
+        &-text {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+      &__design {
+        &-image {
+          img {
+            object-fit: cover;
+          }
+        }
+        &-content {
+          padding: 0 56px;
+
+          &__title {
+            font-size: 18px;
+            margin-top: 350px;
+          }
+          &__description {
+            font-size: 14px;
+          }
+          &__button {
+            gap: 12px;
+
+            span {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            svg {
+              path {
+                fill: $brand-yellow;
+              }
+            }
+          }
+        }
+      }
+      &__portfolio {
+        gap: ($grid-gutter-width / 2);
+        flex-direction: row;
+        margin-top: 18px;
+
+        &-image {
+          max-width: 336px;
+
+          img {
+            object-fit: cover;
+            max-width: 336px;
+          }
+        }
+
+        &-content {
+          padding: 0 56px;
+
+          &__title {
+            font-size: 16px;
+            margin-top: 50%;
+          }
+          &__description {
+            font-size: 14px;
+          }
+          &__button {
+            gap: 12px;
+
+            span {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            svg {
+              path {
+                fill: $brand-yellow;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+
+      &__title {
+        margin-bottom: 32px;
+
+        &-text {
+          font-size: 32px;
+        }
+      }
+      &__design {
+        &-content {
+          padding-left: 30px;
+          padding-right: 0;
+
+          &__title {
+            font-size: 16px;
+          }
+          &__description {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          &__button {
+            gap: 12px;
+
+            span {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            svg {
+              path {
+                fill: $brand-yellow;
+              }
+            }
+          }
+        }
+      }
+      &__portfolio {
+        flex-direction: column;
+
+        &-image {
+          max-width: 406px;
+
+          img {
+            object-fit: cover;
+            max-width: 406px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      &__title {
+        justify-content: start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        &-text {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+      &__portfolio {
+        flex-direction: column;
+
+        &-image {
+          max-width: unset;
+
+          img {
+            object-fit: cover;
+            max-width: 100%;
+          }
+        }
+
+        &-content {
+          padding: 0 32px;
+
+          &__title {
+            font-size: 16px;
+            margin-top: 50%;
+          }
+          &__description {
+            font-size: 14px;
+          }
+          &__button {
+            gap: 12px;
+
+            span {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            svg {
+              path {
+                fill: $brand-yellow;
+              }
+            }
+          }
+        }
+      }
+      &__design {
+        display: none;
       }
     }
   }
