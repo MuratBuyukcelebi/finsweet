@@ -1,7 +1,7 @@
 <template>
   <div class="faq container">
     <div class="row">
-      <div class="col-xl-4">
+      <div class="col-xl-4 mb-xl-0 mb-md-3 mb-0">
         <div class="faq__title">Frequently<br class="d-xl-block d-none">asked questions</div>
         <a href="#" class="faq__contact">Contact us for more info</a>
       </div>
@@ -176,4 +176,127 @@ export default {
   }
 }
 
+@include media-breakpoint-down(xxl) {
+  .faq {
+    &__title {
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+
+  }
+  .faq-item {
+    &__header {
+      &-title {
+        gap: 40px;
+      }
+      &-number {
+        font-size: 20px;
+        line-height: 32px;
+        width: 20px;
+      }
+      &-text {
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xl) {
+  .faq {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  .faq-item {
+    padding-bottom: 24px;
+
+    &__body {
+      padding-left: 64px;
+    }
+    &__inner {
+      padding-top: 24px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  .faq {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  .faq-item {
+    padding-bottom: 16px;
+
+    &__header {
+      &-title {
+        gap: 32px;
+      }
+      &-number {
+        font-size: 18px;
+        line-height: 24px;
+        width: 16px;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &__body {
+      padding-left: 48px;
+    }
+    &__inner {
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .faq {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  .faq-item {
+    padding-bottom: 16px;
+
+    &__header {
+      &-title {
+        gap: 12px;
+      }
+      &-number {
+        font-size: 14px;
+        line-height: 20px;
+        width: 16px;
+      }
+      &-text {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+    &__body {
+      padding-left: 32px;
+    }
+    &__inner {
+      padding-top: 14px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
 </style>
