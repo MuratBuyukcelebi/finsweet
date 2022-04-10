@@ -119,11 +119,24 @@ export default {
           line-height: 48px;
         }
         &__description {
-          font-size: 12px;
+          font-size: 14px;
           line-height: 20px;
         }
         &__actions {
           gap: 16px;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      &-content {
+        &__title {
+          font-size: 26px;
+          line-height: 36px;
+          max-width: 360px;
+        }
+        &__description {
+          max-width: 360px;
+          margin-bottom: 24px;
         }
       }
     }
