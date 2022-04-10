@@ -285,8 +285,19 @@ export default {
         width: 16px;
       }
       &-text {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 20px;
+      }
+      &-icon {
+        height: 12px;
+        width: 12px;
+
+        &::after {
+          width: 12px;
+        }
+        &::before {
+          height: 12px;
+        }
       }
     }
     &__body {
