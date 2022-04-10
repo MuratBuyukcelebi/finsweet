@@ -180,6 +180,103 @@ export default {
       }
     }
   }
+
+  @include media-breakpoint-down(xxl) {
+    &__content {
+      &-title {
+        font-size: 28px;
+        line-height: 40px;
+      }
+      &-description {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &__item {
+      &-title {
+        font-size: 28px;
+        line-height: 40px;
+      }
+      &-user {
+        &__name {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &__class {
+          font-size: 12px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &__content {
+      margin-bottom: 32px;
+
+      &-description {
+        max-width: 300px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__item {
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+      &-user {
+        &__name {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &__class {
+          font-size: 10px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .flickity {
+      &-prev-next-button {
+        bottom: 28px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__content {
+      &-title {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      &-description {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &__item {
+      &-title {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+    }
+
+    .flickity {
+      &-prev-next-button {
+        bottom: 0;
+      }
+    }
+  }
 }
 .flickity {
   &-button {
