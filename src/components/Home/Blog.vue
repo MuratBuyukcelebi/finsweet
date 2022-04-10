@@ -1,8 +1,8 @@
 <template>
   <div class="blog container">
     <div class="blog__title">Our blog</div>
-    <div class="row">
-      <div class="col-xl-4">
+    <div class="row gy-lg-0 gy-5">
+      <div class="col-lg-4">
         <div class="blog-item">
           <div class="blog-item__image"><img src="../../assets/home/blog/1.png" alt="image"></div>
           <div class="blog-item__history">19 Jan 2022</div>
@@ -16,7 +16,7 @@
           </a>
         </div>
       </div>
-      <div class="col-xl-4">
+      <div class="col-lg-4">
         <div class="blog-item">
           <div class="blog-item__image"><img src="../../assets/home/blog/2.png" alt="image"></div>
           <div class="blog-item__history">19 Jan 2022</div>
@@ -30,7 +30,7 @@
           </a>
         </div>
       </div>
-      <div class="col-xl-4">
+      <div class="col-lg-4">
         <div class="blog-item">
           <div class="blog-item__image"><img src="../../assets/home/blog/3.png" alt="image"></div>
           <div class="blog-item__history">19 Jan 2022</div>
@@ -122,6 +122,77 @@ export default {
       svg {
         transform: translateX(6px);
       }
+    }
+  }
+}
+@include media-breakpoint-down(xxl) {
+  .blog-item {
+    &__image {
+      margin-bottom: 32px;
+    }
+    &__history {
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__button {
+      span {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xl) {
+  .blog {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 24px;
+    }
+  }
+  .blog-item {
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__history {
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .blog {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .blog-item {
+    &__image {
+      margin-bottom: 16px;
+    }
+    &__history {
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 500px;
+    }
+    &__description {
+      max-width: 500px;
+      margin-bottom: 20px;
     }
   }
 }
