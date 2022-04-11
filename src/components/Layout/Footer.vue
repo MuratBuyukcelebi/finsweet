@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-      <div class="row flex-lg-row flex-column-reverse gy-lg-0 gy-5">
+      <div class="row flex-lg-row flex-column-reverse gy-lg-0 gy-md-5 gy-4">
         <div class="col-lg-5">
           <a href="#" class="footer__logo"><img src="../../assets/layout/logo.svg" alt="logo"></a>
           <div class="footer__description">We are always open to discuss your project and improve your online presence.</div>
@@ -61,7 +61,7 @@ export default {
 
     &__logo {
       display: block;
-      margin-bottom: 22px !important;
+      margin-bottom: 22px;
 
       img {
         height: 38px;
@@ -209,12 +209,14 @@ export default {
       }
     }
     @include media-breakpoint-down(lg) {
-      .footer-contact {
+      &-contact {
         max-width: 500px;
         padding: 16px;
       }
     }
     @include media-breakpoint-down(md) {
+      padding-top: 64px;
+
       &-social {
         &__title {
           font-size: 28px;
@@ -227,9 +229,35 @@ export default {
           margin-bottom: 10px;
         }
         &__list {
-          display: flex;
-          align-items: center;
-          gap: 26px;
+          gap: 16px;
+        }
+      }
+      &__logo {
+        margin-bottom: 12px;
+
+        img {
+          height: 32px;
+        }
+      }
+      &__description {
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+      &-contact {
+        max-width: 100%;
+      }
+      &__bottom {
+        &-container {
+          align-items: unset;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      &__bottom {
+        &-menu {
+          gap: 12px;
+          margin-bottom: 10px;
         }
       }
     }
