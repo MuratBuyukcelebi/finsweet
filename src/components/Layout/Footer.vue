@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-xl-5">
+      <div class="row flex-lg-row flex-column-reverse gy-lg-0 gy-5">
+        <div class="col-lg-5">
           <a href="#" class="footer__logo"><img src="../../assets/layout/logo.svg" alt="logo"></a>
           <div class="footer__description">We are always open to discuss your project and improve your online presence.</div>
           <div class="footer-contact">
@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-5 offset-xl-1">
+        <div class="col-lg-5 offset-lg-1">
           <div class="footer-social">
             <div class="footer-social__title">Lets Talk!</div>
             <div class="footer-social__description">We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</div>
@@ -149,6 +149,87 @@ export default {
           &:hover {
             text-decoration: underline !important;
           }
+        }
+      }
+    }
+
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 80px;
+
+      &__description {
+        margin-bottom: 20px;
+      }
+      &-contact {
+        padding: 10px;
+        gap: 12px;
+
+        &__item {
+          &-title {
+            font-size: 14px;
+            line-height: 20px;
+          }
+          &-touch {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+      &-social {
+        &__title {
+          font-size: 32px;
+          line-height: 48px;
+        }
+        &__description {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 16px;
+        }
+        &__list {
+          gap: 16px;
+        }
+      }
+      &__bottom {
+        &-container {
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+        &-copy {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &-menu {
+          gap: 16px;
+
+          a {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      .footer-contact {
+        max-width: 500px;
+        padding: 16px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &-social {
+        &__title {
+          font-size: 28px;
+          line-height: 1.5;
+          margin-bottom: 8px;
+        }
+        &__description {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+        &__list {
+          display: flex;
+          align-items: center;
+          gap: 26px;
         }
       }
     }
