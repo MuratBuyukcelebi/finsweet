@@ -153,7 +153,6 @@ export default {
       }
     }
 
-
     @include media-breakpoint-down(xl) {
       padding-top: 80px;
 
