@@ -256,7 +256,7 @@ export default {
       &__bottom {
         &-menu {
           gap: 12px;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
         }
       }
     }
