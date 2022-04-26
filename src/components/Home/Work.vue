@@ -13,36 +13,11 @@
           </a>
         </div>
         <div class="col-lg-6 offset-xl-2 offset-lg-1">
-          <div class="row mb-sm-5 mb-4">
-            <div class="col-sm-6 mb-sm-0 mb-4">
-              <div class="work-order__item">
-                <div class="work-order__item-logo"><span class="work-order__item-logo__text">01</span></div>
-                <div class="work-order__item-title">Strategy</div>
-                <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="work-order__item">
-                <div class="work-order__item-logo"><span class="work-order__item-logo__text">02</span></div>
-                <div class="work-order__item-title">Wireframing</div>
-                <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 mb-sm-0 mb-4">
-              <div class="work-order__item">
-                <div class="work-order__item-logo"><span class="work-order__item-logo__text">03</span></div>
-                <div class="work-order__item-title">Design</div>
-                <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="work-order__item">
-                <div class="work-order__item-logo"><span class="work-order__item-logo__text">04</span></div>
-                <div class="work-order__item-title">Development</div>
-                <div class="work-order__item-description">Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .</div>
-              </div>
+          <div class="work-order__list">
+            <div class="work-order__item" v-for="item in list">
+              <div class="work-order__item-logo"><span class="work-order__item-logo__text">{{ item.number }}</span></div>
+              <div class="work-order__item-title">{{ item.title }}</div>
+              <div class="work-order__item-description">{{ item.description }}</div>
             </div>
           </div>
         </div>
@@ -53,7 +28,34 @@
 
 <script>
 export default {
-  name: "Work"
+  name: "Work",
+
+  data() {
+    return {
+      list: [
+        {
+          number: 1,
+          title: "Strategy",
+          description: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.",
+        },
+        {
+          number: 2,
+          title: "Wireframing",
+          description: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .",
+        },
+        {
+          number: 3,
+          title: "Design",
+          description: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.",
+        },
+        {
+          number: 4,
+          title: "Development",
+          description: "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.",
+        },
+      ]
+    }
+  },
 }
 </script>
 
@@ -105,6 +107,11 @@ export default {
       }
     }
     &-order {
+      &__list {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 48px 24px;
+      }
       &__item {
         &-logo {
           display: flex;
