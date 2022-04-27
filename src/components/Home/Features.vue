@@ -6,7 +6,7 @@
         <div class="features__header-title">Design that solves problems, one product at a time</div>
       </div>
       <div class="features__list">
-        <Card
+        <Cardwaw
           :title="item.title"
           :description="item.description"
           :icon="item.icon"

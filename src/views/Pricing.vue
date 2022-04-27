@@ -186,10 +186,8 @@
 </template>
 
 <script>
-import Faq from "../components/Faq";
 export default {
   name: "Pricing",
-  components: {Faq}
 }
 </script>
 

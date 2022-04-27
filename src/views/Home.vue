@@ -23,7 +23,7 @@ import Features from "../components/Home/Features";
 import Comments from "../components/Home/Comments";
 import Contact from "../components/Home/Contact";
 import Blog from "../components/Home/Blog";
-import Faq from "../components/Faq";
+import Faq from "../components/Home/Faq";
 
 export default {
   components: {Faq, Blog, Contact, Comments, Features, Project, Work, Hero}
