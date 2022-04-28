@@ -1,10 +1,10 @@
 <template>
   <div>
-    <hero/>
-    <work/>
-    <project/>
-    <features/>
-    <comments/>
+    <Hero/>
+    <Work/>
+    <Project/>
+    <Features/>
+    <Comments/>
     <Faq/>
     <contact/>
     <blog/>
