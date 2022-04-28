@@ -6,8 +6,8 @@
     <Features/>
     <Comments/>
     <Faq/>
-    <contact/>
-    <blog/>
+    <Contact/>
+    <Blog/>
   </div>
 </template>
 
