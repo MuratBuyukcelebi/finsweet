@@ -109,6 +109,9 @@ export default {
           line-height: 48px;
         }
       }
+      &__list {
+        grid-template-columns: auto auto;
+      }
     }
     @include media-breakpoint-down(md) {
       padding-top: 64px;
@@ -119,6 +122,10 @@ export default {
           font-size: 32px;
           line-height: 1.5;
         }
+      }
+      &__list {
+        grid-template-columns: auto;
+        gap: 16px;
       }
     }
     @include media-breakpoint-down(sm) {
