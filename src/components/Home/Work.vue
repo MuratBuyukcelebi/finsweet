@@ -227,6 +227,12 @@ export default {
     @include media-breakpoint-down(md) {
       padding-top: 64px;
       padding-bottom: 64px;
+
+      &-order {
+        &__list {
+          grid-template-columns: auto;
+        }
+      }
     }
     @include media-breakpoint-down(sm) {
       &-content {
