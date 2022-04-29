@@ -22,6 +22,7 @@ export default {
     },
     icon: {
       type: String,
+      required: false,
     },
     title: {
       type: String,
@@ -29,6 +30,7 @@ export default {
     },
     description: {
       type: String,
+      required: true,
     },
   }
 }
@@ -47,7 +49,7 @@ export default {
     margin-bottom: 12px;
     font-weight: 500;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 1.5;
     color: $brand-dark-blue;
   }
   &__description {
@@ -63,6 +65,33 @@ export default {
     }
     &--white {
       background-color: #fff;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 36px 30px;
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 20px;
+
+    &__logo {
+      margin-bottom: 10px;
+
+      img {
+        height: 30px;
+        Width: 30px;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
     }
   }
 }
