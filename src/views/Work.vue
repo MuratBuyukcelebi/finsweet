@@ -15,7 +15,10 @@ import Hero from "../components/Work/Hero";
 import Project from "../components/Work/Project";
 export default {
   name: "Work",
-  components: {Project, Hero}
+  components: {
+    Project,
+    Hero
+  }
 }
 </script>
 

@@ -11,7 +11,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 export default {
-  components: {Footer, Header},
+  components: {
+    Footer,
+    Header
+  },
   name: "App"
 }
 </script>

@@ -26,6 +26,15 @@ import Blog from "../components/Home/Blog";
 import Faq from "../components/Home/Faq";
 
 export default {
-  components: {Faq, Blog, Contact, Comments, Features, Project, Work, Hero}
+  components: {
+    Faq,
+    Blog,
+    Contact,
+    Comments,
+    Features,
+    Project,
+    Work,
+    Hero
+  }
 }
 </script>

@@ -31,7 +31,6 @@
 <script>
 export default {
   name: "Faq",
-
   data() {
     return {
       faq: [

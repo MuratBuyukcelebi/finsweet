@@ -19,7 +19,14 @@ import Team from "../components/About/Team";
 
 export default {
   name: "About",
-  components: {Team, Benefits, Vision, Process, Hero, We}
+  components: {
+    Team,
+    Benefits,
+    Vision,
+    Process,
+    Hero,
+    We
+  }
 }
 </script>
 

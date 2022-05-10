@@ -13,7 +13,11 @@ import Content from "../components/Features/Content";
 
 export default {
   name: "Features",
-  components: {Content, Benefits, Hero}
+  components: {
+    Content,
+    Benefits,
+    Hero
+  }
 }
 </script>
 

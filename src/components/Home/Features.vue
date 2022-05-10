@@ -22,7 +22,9 @@ import Card from "../Card";
 
 export default {
   name: "Features",
-  components: {Card},
+  components: {
+    Card
+  },
 
   data() {
     return {
