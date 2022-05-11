@@ -3,7 +3,7 @@
        :class="[`color--${color}`]"
   >
     <div class="card__logo">
-      <img :src="require(`../assets/icons/${icon}.svg`)" alt="card icon">
+      <img :src="require(`@/assets/icons/${icon}.svg`)" alt="card icon">
     </div>
     <div class="card__title">{{ title }}</div>
     <div class="card__description">{{ description }}</div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "Card",
+  name: "Features",
 
   props: {
     color: {
@@ -22,7 +22,6 @@ export default {
     },
     icon: {
       type: String,
-      required: false,
     },
     title: {
       type: String,

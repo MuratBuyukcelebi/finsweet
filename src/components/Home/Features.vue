@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Card from "../Card";
+import Card from "../Card/Features";
 
 export default {
   name: "Features",
