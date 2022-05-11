@@ -2,37 +2,43 @@
   <div class="container process">
     <div class="process__title">The process we follow</div>
     <div class="row">
-      <div class="col-xl-3">
+      <div class="col-xl-3" v-for="(item, key) in list" :key="key">
         <div class="process-item">
-          <div class="process-item__title">Planning</div>
-          <div class="process-item__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
+          <div class="process-item__title">{{ item.title }}</div>
+          <div class="process-item__description">{{ item.description }}</div>
         </div>
       </div>
-      <div class="col-xl-3">
-        <div class="process-item">
-          <div class="process-item__title">Conception</div>
-          <div class="process-item__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
-        </div>
-      </div>
-      <div class="col-xl-3">
-        <div class="process-item">
-          <div class="process-item__title">Design</div>
-          <div class="process-item__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
-        </div>
-      </div>
-      <div class="col-xl-3">
-        <div class="process-item">
-          <div class="process-item__title">Development</div>
-          <div class="process-item__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Process"
+  name: "Process",
+
+  data() {
+    return {
+      list: [
+        {
+          title: "Planning",
+          description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+        },
+        {
+          title: "Conception",
+          description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+        },
+        {
+          title: "Design",
+          description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+        },
+        {
+          title: "Development",
+          description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+        },
+      ]
+    }
+  },
 }
 </script>
 
