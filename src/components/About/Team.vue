@@ -3,60 +3,18 @@
     <div class="container">
       <div class="team__title">Meet our team</div>
       <div class="row team__list">
-        <div class="col-xl-3">
+        <div class="col-xl-3" v-for="(item, key) in list" :key="key">
           <div class="team-item">
-            <div class="team-item__logo">
-              <img src="../../assets/about/team/1.png" alt="image">
-              <div class="team-item__logo-social">
-                <a href="#"><img src="../../assets/icons/facebook.svg" alt="facebook"></a>
-                <a href="#"><img src="../../assets/icons/twitter.svg" alt="twitter"></a>
-                <a href="#"><img src="../../assets/icons/linkedin.svg" alt="linkedin"></a>
+            <div class="team-item__avatar">
+              <img class="team-item__avatar-image" :src="item.image" alt="image">
+              <div class="team-item__avatar-social">
+                <a :href="`${item.facebook}`"><img src="../../assets/icons/facebook.svg" alt="facebook"></a>
+                <a :href="`${item.twitter}`"><img src="../../assets/icons/twitter.svg" alt="twitter"></a>
+                <a :href="`${item.linkedin}`"><img src="../../assets/icons/linkedin.svg" alt="linkedin"></a>
               </div>
             </div>
-            <div class="team-item__title">John Smith</div>
-            <div class="team-item__class">CEO</div>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="team-item">
-            <div class="team-item__logo">
-              <img src="../../assets/about/team/2.png" alt="image">
-              <div class="team-item__logo-social">
-                <a href="#"><img src="../../assets/icons/facebook.svg" alt="facebook"></a>
-                <a href="#"><img src="../../assets/icons/twitter.svg" alt="twitter"></a>
-                <a href="#"><img src="../../assets/icons/linkedin.svg" alt="linkedin"></a>
-              </div>
-            </div>
-            <div class="team-item__title">Simon Adams</div>
-            <div class="team-item__class">CTO</div>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="team-item">
-            <div class="team-item__logo">
-              <img src="../../assets/about/team/3.png" alt="image">
-              <div class="team-item__logo-social">
-                <a href="#"><img src="../../assets/icons/facebook.svg" alt="facebook"></a>
-                <a href="#"><img src="../../assets/icons/twitter.svg" alt="twitter"></a>
-                <a href="#"><img src="../../assets/icons/linkedin.svg" alt="linkedin"></a>
-              </div>
-            </div>
-            <div class="team-item__title">Paul Jones</div>
-            <div class="team-item__class">Design Lead</div>
-          </div>
-        </div>
-        <div class="col-xl-3">
-          <div class="team-item">
-            <div class="team-item__logo">
-              <img src="../../assets/about/team/4.png" alt="image">
-              <div class="team-item__logo-social">
-                <a href="#"><img src="../../assets/icons/facebook.svg" alt="facebook"></a>
-                <a href="#"><img src="../../assets/icons/twitter.svg" alt="twitter"></a>
-                <a href="#"><img src="../../assets/icons/linkedin.svg" alt="linkedin"></a>
-              </div>
-            </div>
-            <div class="team-item__title">Sara Hardin</div>
-            <div class="team-item__class">Project Manager</div>
+            <div class="team-item__title">{{ item.title }}</div>
+            <div class="team-item__position">{{ item.position }}</div>
           </div>
         </div>
       </div>
@@ -66,7 +24,46 @@
 
 <script>
 export default {
-  name: "Team"
+  name: "Team",
+
+  data() {
+    return {
+      list: [
+        {
+          title: "John Smith",
+          position: "CEO",
+          image: "https://randomuser.me/api/portraits/men/22.jpg",
+          facebook: "#",
+          twitter: "#",
+          linkedin: "#"
+        },
+        {
+          title: "Simon Adams",
+          position: "CTO",
+          image: "https://randomuser.me/api/portraits/men/29.jpg",
+          facebook: "#",
+          twitter: "#",
+          linkedin: "#"
+        },
+        {
+          title: "Paul Jones",
+          position: "Design Lead",
+          image: "https://randomuser.me/api/portraits/men/24.jpg",
+          facebook: "#",
+          twitter: "#",
+          linkedin: "#"
+        },
+        {
+          title: "Sara Hardin",
+          position: "Project Manager",
+          image: "https://randomuser.me/api/portraits/men/20.jpg",
+          facebook: "#",
+          twitter: "#",
+          linkedin: "#"
+        },
+      ]
+    }
+  },
 }
 </script>
 
@@ -95,7 +92,7 @@ export default {
   padding-top: 48px;
   padding-bottom: 32px;
 
-  &__logo {
+  &__avatar {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -112,6 +109,11 @@ export default {
       gap: 10px;
       bottom: -100px;
       transition: all .6s;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     &::before {
@@ -132,7 +134,7 @@ export default {
     color: $brand-dark-blue;
     margin-bottom: 2px;
   }
-  &__class {
+  &__position {
     font-size: 16px;
     line-height: 28px;
     opacity: 0.7;
@@ -140,7 +142,7 @@ export default {
   }
 
   &:hover {
-    & .team-item__logo {
+    & .team-item__avatar {
       &-social {
         bottom: 14px;
       }
