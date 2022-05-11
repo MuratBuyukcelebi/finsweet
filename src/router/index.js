@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from "../views/Home"
-import About from "../views/About"
-import Pricing from "../views/Pricing"
-import Features from "../views/Features"
-import Contact from "../views/Contact"
-import Privacy from "../views/Privacy"
-import Work from "../views/Work"
+import home from "../views/home"
+import about from "../views/about"
+import pricing from "../views/pricing"
+import features from "../views/features"
+import contact from "../views/contact"
+import privacy from "../views/privacy"
+import work from "../views/work"
 
 Vue.use(VueRouter)
 
@@ -17,37 +17,37 @@ const routes = [
     children: [
       {
         path: '/',
-        component: Home,
+        component: home,
       },
       {
         path: '/about',
-        component: About,
+        component: about,
       },
       {
         path: '/pricing',
-        component: Pricing,
+        component: pricing,
       },
       {
         path: '/features',
-        component: Features,
+        component: features,
       },
       {
         path: '/contact',
-        component: Contact,
+        component: contact,
       },
       {
         path: '/privacy',
-        component: Privacy,
+        component: privacy,
       },
       {
         path: '/work',
-        component: Work,
+        component: work,
       }
     ]
   },
   {
     path: '/pages',
-    component: () => import('../views/Pages'),
+    component: () => import('../views/pages'),
   },
 ]
 
