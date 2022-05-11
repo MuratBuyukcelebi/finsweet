@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  data() {},
   methods: {
     screenSize() {
       document.documentElement.style.setProperty('--app-height', `${document.documentElement.clientHeight}px`)
