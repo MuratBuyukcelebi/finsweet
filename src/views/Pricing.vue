@@ -180,14 +180,59 @@
           </div>
         </div>
       </div>
+      <Faq title="Frequently asked questions" contact="Contact us For More Info">
+        <FaqItem v-for="(item, key) in faq" v-bind="item" :key="key" />
+      </Faq>
     </div>
-    <Faq/>
   </div>
 </template>
 
 <script>
+import Faq from "../components/Faq/Faq";
+import FaqItem from "../components/Faq/FaqItem";
+
 export default {
   name: "Pricing",
+  components: {
+    FaqItem,
+    Faq
+  },
+  data() {
+    return {
+      faq: [
+        {
+          id: "faq1",
+          number: "01",
+          text: "How much time does it take?",
+          description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          id: "faq2",
+          number: "02",
+          text: "What is your class naming convention?",
+          description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          id: "faq3",
+          number: "03",
+          text: "How do you communicate?",
+          description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          id: "faq4",
+          number: "04",
+          text: "I have a bigger project. Can you handle it?",
+          description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          id: "faq5",
+          number: "05",
+          text: "What is your class naming convention?",
+          description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+      ]
+    }
+  },
 }
 </script>
 

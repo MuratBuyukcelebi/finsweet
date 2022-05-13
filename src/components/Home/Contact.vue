@@ -39,7 +39,6 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
-
   &__container {
     overflow: hidden;
     max-height: 691px;
