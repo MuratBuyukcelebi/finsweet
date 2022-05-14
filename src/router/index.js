@@ -7,6 +7,7 @@ import features from "../views/features"
 import contact from "../views/contact"
 import privacy from "../views/privacy"
 import work from "../views/work"
+import elements from "../views/elements"
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,10 @@ const routes = [
       {
         path: '/work',
         component: work,
+      },
+      {
+        path: '/elements',
+        component: elements,
       }
     ]
   },
