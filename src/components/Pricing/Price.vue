@@ -90,7 +90,7 @@ export default {
     }
   }
   &__location {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     min-height: 130px;
     overflow: hidden;
     display: -webkit-box;

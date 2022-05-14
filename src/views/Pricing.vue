@@ -6,7 +6,7 @@
         <div class="pricing__top-description">When you’re ready to go beyond prototyping in Figma, Webflow is ready to help you bring your designs to life — without coding them.</div>
       </div>
       <div class="row">
-        <div class="col-xl-4" v-for="(item, key) in priceing" :key="key">
+        <div class="col-xl-4" v-for="(item, key) in price" :key="key">
           <Price v-bind="item" />
         </div>
       </div>
@@ -64,16 +64,16 @@ export default {
           description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
       ],
-      priceing: [
+      price: [
         {
           currency: "$",
-          price: "0",
-          purpose: "month",
-          title: "Basic",
-          description: "Lorem  aliqua.",
+          price: "299",
+          purpose: "Per Design",
+          title: "Landing Page ",
+          description: "When you’re ready to go beyond prototyping in Figma, ",
           feature: [
             {
-              active: false,
+              active: true,
               title: "All limited links"
             },
             {
@@ -85,25 +85,25 @@ export default {
               title: "Chat support"
             },
             {
-              active: true,
+              active: false,
               title: "Optimize hashtags"
             },
             {
-              active: true,
+              active: false,
               title: "Unlimited users"
             },
           ],
         },
         {
           currency: "$",
-          price: "0",
-          purpose: "month",
-          title: "Basic",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          price: "399",
+          purpose: "Multi Design",
+          title: "Website Page ",
+          description: "When you’re ready to go beyond prototyping in Figma, Webflow’s ready to help.",
           front: true,
           feature: [
             {
-              active: false,
+              active: true,
               title: "All limited links"
             },
             {
@@ -126,13 +126,13 @@ export default {
         },
         {
           currency: "$",
-          price: "0",
-          purpose: "month",
-          title: "Basic",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          price: "499 +",
+          purpose: "Per Design",
+          title: "Complex Project",
+          description: "When you’re ready to go beyond prototyping in Figma, ",
           feature: [
             {
-              active: false,
+              active: true,
               title: "All limited links"
             },
             {
@@ -150,6 +150,10 @@ export default {
             {
               active: true,
               title: "Unlimited users"
+            },
+            {
+              active: true,
+              title: "Assist and Help"
             },
           ],
         },
