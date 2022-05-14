@@ -1,67 +1,72 @@
 <template>
-  <div class="pricing-item">
-    <div class="pricing-item__top">
-      <span class="pricing-item__top-price">$299</span>
-      <span class="pricing-item__top-limit">Per Design</span>
+  <div class="pricing" :class="{'pricing--front' : front}">
+    <div class="pricing__top">
+      <span class="pricing__top-price">{{ currency }}{{ price }}</span>
+      <span class="pricing__top-for">{{ purpose }}</span>
     </div>
-    <div class="pricing-item__location">
-      <div class="pricing-item__location-title">Landing Page </div>
-      <div class="pricing-item__location-description">When you’re ready to go beyond prototyping in Figma, </div>
+    <div class="pricing__location">
+      <div class="pricing__location-title">{{ title }}</div>
+      <div class="pricing__location-description">{{ description }}</div>
     </div>
-    <div class="pricing-item__feature">
-      <div class="pricing-item__feature-item pricing-item__feature-item--active">
-        <div class="pricing-item__feature-item__icon">
+    <div class="pricing__feature">
+      <div class="pricing__feature-item" v-for="(item, key) in feature" :key="key" :class="!item.active || 'active'">
+        <div class="pricing__feature-item__icon">
           <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
           </svg>
         </div>
-        <div class="pricing-item__feature-item__text">All limited links</div>
-      </div>
-      <div class="pricing-item__feature-item pricing-item__feature-item--active">
-        <div class="pricing-item__feature-item__icon">
-          <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
-          </svg>
-        </div>
-        <div class="pricing-item__feature-item__text">Own analytics platform</div>
-      </div>
-      <div class="pricing-item__feature-item pricing-item__feature-item--active">
-        <div class="pricing-item__feature-item__icon">
-          <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
-          </svg>
-        </div>
-        <div class="pricing-item__feature-item__text">Chat support</div>
-      </div>
-      <div class="pricing-item__feature-item">
-        <div class="pricing-item__feature-item__icon">
-          <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
-          </svg>
-        </div>
-        <div class="pricing-item__feature-item__text">Optimize hashtags</div>
-      </div>
-      <div class="pricing-item__feature-item">
-        <div class="pricing-item__feature-item__icon">
-          <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#A8AAB0"/>
-          </svg>
-        </div>
-        <div class="pricing-item__feature-item__text">Unlimited users</div>
+        <div class="pricing__feature-item__text">{{ item.title }}</div>
       </div>
     </div>
-    <a href="#" class="btn btn-secondary pricing-item__button">Get Start</a>
+    <a href="#" class="btn w-100" :class="front ? 'btn-primary' : 'btn-secondary'">Get Start</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Price"
+  name: "Price",
+  props: {
+    currency: {
+      type: String,
+      default: "$",
+    },
+    price: {
+      type: String,
+      default: "0",
+    },
+    purpose: {
+      type: String,
+      default: "month",
+    },
+    title: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    front: {
+      type: Boolean,
+      default: false,
+    },
+    feature: {
+      type: Array,
+      active: {
+        type: Boolean,
+        default: true,
+      },
+      title: {
+        type: String,
+        default: "",
+      },
+    },
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.pricing-item {
+.pricing {
   padding: 64px 48px;
   background: $brand-gray;
   border-radius: 12px;
@@ -78,7 +83,7 @@ export default {
       line-height: 56px;
       color: $brand-dark-blue;
     }
-    &-limit {
+    &-for {
       font-size: 16px;
       line-height: 28px;
       color: $brand-royal-blue;
@@ -87,6 +92,11 @@ export default {
   &__location {
     margin-bottom: 50px;
     min-height: 130px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
 
     &-title {
       font-weight: 500;
@@ -110,7 +120,7 @@ export default {
     height: 100%;
     min-height: 268px;
     margin-bottom: 64px;
-    justify-content: center;
+    justify-content: flex-start;
 
     &-item {
       display: flex;
@@ -124,7 +134,7 @@ export default {
         opacity: 0.7;
       }
 
-      &--active & {
+      .active & {
         &__icon {
           svg {
             path {
@@ -138,11 +148,8 @@ export default {
       }
     }
   }
-  &__button {
-    width: 100%;
-  }
 
-  &--center {
+  &--front {
     position: relative;
     background: #1C1E53 !important;
     z-index: 0;
@@ -161,7 +168,7 @@ export default {
       pointer-events: none;
     }
   }
-  &--center & {
+  &--front & {
     z-index: 1;
 
     &__top {
@@ -171,7 +178,7 @@ export default {
       &-price {
         color: #fff;
       }
-      &-limit {
+      &-for {
         color: $brand-yellow;
       }
     }
