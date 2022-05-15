@@ -40,11 +40,13 @@ export default {
 .faq-item {
   border-bottom: 2px solid #ECECF1;
   padding-bottom: 32px;
+  padding-left: 100px;
+  position: relative;
 
   &__header {
     background-color: transparent;
     border: none;
-    padding-top: 32px;
+    padding: 32px 0 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -56,6 +58,8 @@ export default {
       gap: 60px;
     }
     &-number {
+      position: absolute;
+      left: 24px;
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
@@ -69,12 +73,12 @@ export default {
       color: $brand-dark-blue;
     }
     &-icon {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 16px;
       width: 16px;
-      position: relative;
       transition: all .3s;
 
       &::after {
@@ -94,7 +98,7 @@ export default {
     }
   }
   &__body {
-    padding-left: 60px + 24px + 8px;
+    padding-right: 64px;
   }
   &__inner {
     max-width: 624px;
@@ -117,23 +121,34 @@ export default {
   @include media-breakpoint-down(xl) {
     padding-bottom: 24px;
 
-    &__body {
-      padding-left: 92px;
-    }
     &__inner {
       padding-top: 24px;
       font-size: 16px;
       line-height: 24px;
     }
   }
+  @include media-breakpoint-down(lg) {
+    padding-left: 64px;
+
+    &__header {
+      &-number {
+        left: 12px;
+      }
+    }
+    &__body {
+      padding-right: 32px;
+    }
+  }
   @include media-breakpoint-down(md) {
     padding-bottom: 16px;
+    padding-left: 48px;
 
     &__header {
       &-title {
         gap: 32px;
       }
       &-number {
+        left: 4px;
         font-size: 18px;
         line-height: 24px;
         width: 16px;
@@ -144,7 +159,7 @@ export default {
       }
     }
     &__body {
-      padding-left: 54px;
+      padding-right: 24px;
     }
     &__inner {
       padding-top: 16px;
@@ -154,6 +169,7 @@ export default {
   }
   @include media-breakpoint-down(sm) {
     padding-bottom: 16px;
+    padding-left: 32px;
 
     &__header {
       &-title {
@@ -181,7 +197,7 @@ export default {
       }
     }
     &__body {
-      padding-left: 34px;
+      padding-right: 16px;
     }
     &__inner {
       padding-top: 14px;
