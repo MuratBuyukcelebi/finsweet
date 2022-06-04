@@ -1,1 +1,1 @@
-# FinsWeet
+# Finsweet
